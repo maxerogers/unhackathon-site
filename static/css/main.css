@@ -1,17 +1,29 @@
 #main {
-    background-image: url("../images/");
     position: relative;
     z-index: 0;
 }
 
+#welcome {
+    font-family: helvetica;
+    font-size: 15px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 300px;
+    font-weight: bold;
+    color: white;
+}
+
 #loading-mask {
-    background-color: #AAAAEE;
+    background-color: black;
     position: fixed;
     z-index: 0;
     left: 0;
     right: 0;
     top: 0;
     height: 100%;
+    overflow: hidden;
 }
 
 body.loaded #loading-mask {
@@ -26,14 +38,29 @@ body.loaded #loading-mask {
     right: 0;
     top: 0;
     height: 100%;
+    overflow: hidden;
 }
 
 #first {
-    background-color: red;
+    background-image: url("../images/img2.jpg");
+    background-position: 50% 50%;
+    background-origin: 50% 50%;
+}
+
+#first > .content {
+    margin-top: 250px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: helvetica;
+    color: white;
 }
 
 #second {
     background-color: blue;
+    background-image: url("../images/img1.jpg");
+    background-position: 50% 50%;
+    background-origin: 50% 50%;
 }
 
 #third {
@@ -42,4 +69,19 @@ body.loaded #loading-mask {
 
 #fourth {
     background-color: orange;
+}
+
+#second > .content {
+    background-image: url("../images/img1blur.jpg");
+    background-position: 50% 50%;
+    background-origin: 50% 50%;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    font-size: 25px;
+    color:white;
+    width: 500px;
+    padding: 20px;
+    font-family: Helvetica;
 }

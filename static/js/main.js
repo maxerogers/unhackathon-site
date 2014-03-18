@@ -82,5 +82,11 @@
         frames.forEach(function (frame, index) {
             frame.style.zIndex = frames.length - index - 1;
         });
+
+        /*$('#first .content').blurjs({
+            source: '#first',
+            radius: 5,
+            overlay: 'rgba(255,255,255,0.4)'
+        });*/
     });
 })();
