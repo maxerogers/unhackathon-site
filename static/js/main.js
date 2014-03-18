@@ -65,10 +65,12 @@
     }
 
     function keyDown(event) {
+        var startPage = Math.floor(position);
         if (event.which === 38) {
-            scrollToPage(position - 1);
+            var newPos = position > startPage + .01 ? startPage : startPage - 1;
+            scrollToPage(newPos);
         } else if (event.which === 40) {
-            scrollToPage(position + 1);
+            scrollToPage(startPage + 1);
         }
     }
 
