@@ -1,0 +1,45 @@
+#main {
+    background-image: url("../images/");
+    position: relative;
+    z-index: 0;
+}
+
+#loading-mask {
+    background-color: #AAAAEE;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+body.loaded #loading-mask {
+    z-index: 1;
+    height: 0px;
+    transition: height .5s linear 1s;
+}
+
+#main > section {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+#first {
+    background-color: red;
+}
+
+#second {
+    background-color: blue;
+}
+
+#third {
+    background-color: green;
+}
+
+#fourth {
+    background-color: orange;
+}
