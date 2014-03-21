@@ -7,6 +7,7 @@
     var scrollingToPage = false;
 
     function scrollToPage(page) {
+        clearScrollToPageTimeout();
         scrollingToPage = true;
         var startPosition = position;
         var endPosition;
@@ -19,7 +20,7 @@
         endPosition = Math.max(0, endPosition);
 
         var startTime = window.performance.now();
-        var endTime = startTime + 500;
+        var endTime = startTime + 300;
         function runAnimation(curTime) {
             if (curTime > endTime) {
                 position = endPosition;
@@ -33,6 +34,13 @@
             requestAnimationFrame(runAnimation);
         }
         requestAnimationFrame(runAnimation);
+    }
+
+    function clearScrollToPageTimeout() {
+        if (scrollToPageTimeout) {
+            clearTimeout(scrollToPageTimeout);
+            scrollToPageTimeout = null;
+        }
     }
 
     function doScroll() {
@@ -53,6 +61,11 @@
         }
         var currentFrame = frames[currentFrameIndex];
         currentFrame.style.height = (window.innerHeight - (position % 1) * window.innerHeight) + "px";
+
+        clearScrollToPageTimeout();
+        scrollToPageTimeout = setTimeout(function () {
+            scrollToPage(Math.round(position));
+        }, 200)
     }
 
     function scroll(event) {
