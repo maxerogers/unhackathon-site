@@ -14,7 +14,7 @@ def static_url(path):
     if app.debug:
         return url_for("static", filename=path)
     else:
-        return app.config["CDN_DOMAIN"] + "/"+ path
+        return "http://{0}/static/{1}?v={2}".format(app.config["CDN_DOMAIN"], path, app.config["CDN_VERSION"])
 
 app.jinja_env.globals["static_url"] = static_url
 
