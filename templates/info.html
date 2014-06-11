@@ -1,12 +1,13 @@
 {% extends "_base.html" %}
 {% block center %}
-  <form id="email-form" action="{{url_for('submit')}}" method="POST">
+  <form id="email-form" class="center-form" action="{{url_for('submit')}}" method="POST">
     <input type="hidden" value="{{type}}" name="type">
-    <label id="ideas-label">
-      <input type="checkbox" name="ideas">
-      I have ideas
-    </label>
+    <h3>I have ideas</h3>
+    <div class="slideThree">
+      <input type="checkbox" name="ideas" id="slideThree">
+      <label for="slideThree"></label>
+    </div>
     <input name="email" class="block-input" type="email" placeholder="joe@example.com">
-    <input class="block-input"type="submit">
+    <input class="block-input" type="submit">
   </form>
 {% endblock %}
