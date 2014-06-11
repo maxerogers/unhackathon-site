@@ -4,9 +4,11 @@
     <link rel="stylesheet" href="{{static_url("main.css")}}">
   </head>
   <body class="flex-body">
-    <div class="flex-spacer"></div>
-    {% block center %}
-    {% endblock %}
-    <div class="flex-spacer"></div>
+    <div class="flex-div">
+        <div class="flex-spacer"></div>
+        {% block center %}
+        {% endblock %}
+        <div class="flex-spacer"></div>
+    </div>
   </body>
 </html>

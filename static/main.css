@@ -15,6 +15,12 @@ body.flex-body {
     right: 0;
     bottom: 0;
     flex-direction: column;
+    margin:0;
+}
+
+.flex-div {
+    display: flex;
+    flex-direction: column;
 }
 
 .flex-spacer {
@@ -58,8 +64,11 @@ body.flex-body {
     background-color: #22cc22;
 }
 
-body {
-    background-image: url("./img4.jpg");
+.flex-div {
+    background-image: url("./background.jpg");
+    background-origin: 50% 50%;
+    background-position: center center;
+    height: 100%;
 }
 
 .slideThree {
