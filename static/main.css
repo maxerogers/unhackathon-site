@@ -7,6 +7,18 @@ h3 {
     font-family: chunkFive;
 }
 
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+
+    border-radius: 5px;
+    padding:10px;
+
+    background-image: url("./background-blur.jpg");
+    background-position: center center;
+}
+
 body.flex-body {
     display: flex;
     position: absolute;
@@ -51,24 +63,30 @@ body.flex-body {
 }
 
 .center-form input[type=submit] {
-    background-color: #00aa00;
+    background-color: #aa0000;
+    font-family: chunkFive;
     border-radius: 5px;
     padding: 20px;
     font-size: 30px;
-    font-family: helvetica;
     color: #fff;
     border: none;
 }
 
 .center-form input[type=submit]:hover {
-    background-color: #22cc22;
+    background-color: #cc2222;
 }
 
 .flex-div {
     background-image: url("./background.jpg");
-    background-origin: 50% 50%;
     background-position: center center;
     height: 100%;
+}
+
+#title {
+    color: #aa0000;
+    text-align: center;
+    font-family: chunkFive;
+    font-size: 50px;
 }
 
 .slideThree {
