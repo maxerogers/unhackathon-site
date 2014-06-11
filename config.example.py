@@ -1,0 +1,1 @@
+CDN_DOMAIN = "http://blah.cloudfront.net"
