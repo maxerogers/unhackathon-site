@@ -3,15 +3,47 @@
   <head>
     <link rel="stylesheet" href="{{static_url("main.css")}}">
   </head>
-  <body class="flex-body">
-    <div class="flex-div">
-        <div class="flex-spacer"></div>
-        <div class="content">
-            <h1 id="title">Unhackathon</h1>
-            {% block center %}
-            {% endblock %}
+  <body>
+    <div id="first-screen">
+      <div class="flex-spacer"></div>
+      <div class="content">
+        <h1 id="title">Unhackathon</h1>
+        <div class="center-form" id="type-buttons">
+          <h3>I am a...</h3>
+          <input class="input-button" type="button" value="Mentor" name="type">
+          <input class="input-button" type="button" value="Sponsor" name="type">
+          <input class="input-button" type="button" value="Hacker" name="type">
         </div>
-        <div class="flex-spacer"></div>
+        <form id="email-form" class="center-form" action="{{url_for('submit')}}" method="POST">
+          <input type="hidden" name="type">
+          <h3>I have ideas</h3>
+          <div class="slideThree">
+            <input type="checkbox" name="ideas" checked="checked" id="slideThree">
+            <label for="slideThree"></label>
+          </div>
+          <input name="email" class="block-input" type="email" placeholder="joe@example.com">
+          <input class="block-input input-button" type="submit">
+        </form>
+      </div>
+      <div class="flex-spacer"></div>
     </div>
+    <section id="about">
+      <h1 class="section-header">About</h1>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </section>
+    <section id="faq">
+      <h1 class="section-header">Faq</h1>
+
+      <h3 class="question">Q: What is love?</h3>
+      <div class="answer">
+        Baby don't hurt me. Don't hurt me, no more. <br><br>
+
+        Lorem ipsum doleros as agas asdfsd asdfasd <br><br>
+
+        hello there
+      </div>
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{static_url("main.js")}}"></script>
   </body>
 </html>
