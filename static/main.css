@@ -21,6 +21,14 @@ h1,h2,h3,h4,h5 {
 
     background-image: url("./background-blur.jpg");
     background-position: center center;
+    background-size: 1900px 1144px;
+
+}
+
+@media(max-width:500px) {
+  .content {
+    margin: 0;
+  }
 }
 
 body {
@@ -29,7 +37,9 @@ body {
 
 .flex-spacer {
     flex-basis: 0;
+    -webkit-flex-basis: 0;
     flex-grow: 1;
+    -webkit-flex-grow: 1;
 }
 
 .center-form, .center {
@@ -56,6 +66,7 @@ body {
 }
 
 .center-form .input-button {
+    -webkit-appearance: none;
     background-color: #aa0000;
     font-family: chunkFive;
     border-radius: 5px;
@@ -65,6 +76,15 @@ body {
     border: none;
 }
 
+@media(max-width:500px) {
+  .center-form .input-button {
+    font-size: 15px;
+    padding: 10px;
+    width: 30%;
+    margin-left: 2%;
+  }
+}
+
 .center-form .input-button:hover {
     background-color: #cc2222;
 }
@@ -72,10 +92,14 @@ body {
 #first-screen {
     background-image: url("./background.jpg");
     background-position: center center;
+    background-size: 1900px 1144px;
     height: 100vh;
     min-height: 450px;
+    max-height:100vw;
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
 #title {
@@ -84,16 +108,44 @@ body {
     font-family: chunkFive;
     font-size: 50px;
 }
+@media(max-width:500px) {
+  #first-screen {
+    min-height: 0px;
+  }
+  #title {
+    font-size: 30px;
+  }
+}
 
 body > section {
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media(min-width:768px) {
+  body > section {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media(min-width:992px) {
+  body > section {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media(min-width:1200px) {
+  body > section {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
 }
 
 section > .section-header {
   text-align: center;
 }
-
 
 .slideThree {
   width: 100px;

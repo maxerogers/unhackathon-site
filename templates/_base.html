@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;"/>
     <link rel="stylesheet" href="{{static_url("main.css")}}">
   </head>
   <body>
@@ -34,26 +35,18 @@
     <section id="faq">
       <h1 class="section-header">Faq</h1>
       <div id="questions-container" class="row">
-        <div class="question-answer col-md-4 col-sm-6">
-          <h3 class="question">Q: What is love?</h3>
-          <div class="answer">
-            Baby don't hurt me. Don't hurt me, no more. <br><br>
+        {% for number in range(10 - users|count) %}
+          <div class="question-answer col-md-4 col-sm-6">
+            <h3 class="question">Q: What is love?</h3>
+            <div class="answer">
+              Baby don't hurt me. Don't hurt me, no more. Baby don't hurt me anymore baby<br><br>
 
-            Lorem ipsum doleros as agas asdfsd asdfasd <br><br>
+              Lorem ipsum doleros as agas asdfsd asdfasd <br><br>
 
-            hello there
+              hello there
+            </div>
           </div>
-        </div>
-        <div class="question-answer col-md-4 col-sm-6">
-          <h3 class="question">Q: What is love?</h3>
-          <div class="answer">
-            Baby don't hurt me. Don't hurt me, no more. <br><br>
-
-            Lorem ipsum doleros as agas asdfsd asdfasd <br><br>
-
-            hello there
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </section>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
