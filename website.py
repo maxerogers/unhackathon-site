@@ -22,6 +22,14 @@ app.jinja_env.globals["static_url"] = static_url
 def index():
     return render_template("index.html")
 
+@app.route("/create_signup")
+def create_signup():
+    print request.args
+
+@app.route("/signups")
+def signups():
+    return render_template("signups.html")
+
 @app.route("/info")
 def info():
     if "type" not in request.args:
